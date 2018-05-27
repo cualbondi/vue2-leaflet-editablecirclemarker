@@ -1,0 +1,37 @@
+{
+  "name": "vue2-leaflet-editablecirclemarker",
+  "version": "1.0.1",
+  "description": "editablecirclemarker plugin extension for vue2-leaflet package",
+  "main": "dist/Vue2LeafletEditablecirclemarker.js",
+  "scripts": {
+    "build": "vue build Vue2LeafletEditablecirclemarker.vue --prod --lib --config build.config.js",
+    "example": "vue build example.vue"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jperelli/vue2-leaflet-editablecirclemarker.git"
+  },
+  "keywords": [
+    "vue2",
+    "leaflet",
+    "editablecirclemarker"
+  ],
+  "author": "Julián Perelli (http://jperelli.com.ar/)",
+  "contributors": [
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cualbondi/vue2-leaflet-editablecirclemarker/issues"
+  },
+  "homepage": "https://github.com/cualbondi/vue2-leaflet-editablecirclemarker#readme",
+  "dependencies": {
+    "leaflet": "^1.3.1",
+    "leaflet-editablecirclemarker": "^1.0.2",
+    "vue2-leaflet": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "vue-cli": "~2.8.2",
+    "webpack-node-externals": "^1.5.4"
+  }
+}
