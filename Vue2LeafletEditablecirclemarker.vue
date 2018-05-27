@@ -39,6 +39,9 @@ export default {
   },
   mounted() {
     this.mapObject = L.editableCircleMarker(this.latLng, this.rad, this.options);
+    this.mapObject.on('moveend', (e) => {
+      this.$emit('update:latLng', e.target._latlng)
+    })
     L.DomEvent.on(this.mapObject, this.$listeners);
     propsBinder(this, this.mapObject, props);
     this.ready = true;
