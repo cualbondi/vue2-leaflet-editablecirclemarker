@@ -1,7 +1,7 @@
 <template>
-  <v-map :zoom=10 :center="center">
+  <v-map :zoom=14 :center="center">
     <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
-    <v-editablecirclemarker :latLng.sync="ll" :options="{icon:icon}"></v-editablecirclemarker>
+    <v-editablecirclemarker :latLng.sync="ll" :rad="rad" :options="{icon:icon}"></v-editablecirclemarker>
   </v-map>
 </template>
 
@@ -30,12 +30,16 @@
       {iconUrl, shadowUrl},
     ))
     center = L.latLng(x, y)
+    rad = 200
     get ll() {
       return llvar
     }
     set ll(val) {
       console.log('setll', val)
       llvar = val
+    }
+    mounted () {
+      setTimeout(()=>this.rad=1000, 3000)
     }
   }
 </script>

@@ -1,6 +1,6 @@
 {
   "name": "vue2-leaflet-editablecirclemarker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "editablecirclemarker plugin extension for vue2-leaflet package",
   "main": "dist/Vue2LeafletEditablecirclemarker.js",
   "scripts": {

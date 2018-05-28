@@ -28,7 +28,7 @@ You can see the demo code in the file [example.vue](example.vue)
 something like this
 
     <v-map :zoom=10 :center="initialLocation">
-      <v-editablecirclemarker :paths="[latlngsarray, otherlatlngsarray]" :options="options"></v-editablecirclemarker>
+      <v-editablecirclemarker :latLng.sync="ll" :rad="rad" :options="options"></v-editablecirclemarker>
     </v-map>
 
 ### on &lt;script&gt; add
@@ -66,7 +66,7 @@ If you need to access other editableCircleMarker methods, you can do it with a r
     ...
 
     ...
-    this.$refs.circlemarkerRef.mapObject.setPaths()
+    this.$refs.circlemarkerRef.mapObject.setRadius(100)
     ...
 
 

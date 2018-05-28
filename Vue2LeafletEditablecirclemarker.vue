@@ -13,6 +13,7 @@ import { findRealParent, propsBinder } from 'vue2-leaflet'
 const props = {
   rad: {
     type: Number,
+    custom: true,
   },
   latLng: {
     type: [Object, Array],
@@ -62,6 +63,9 @@ export default {
     },
     setLatLng(value) {
       this.mapObject.setLatLng(value);
+    },
+    setRad(value) {
+      this.mapObject.setRadius(value);
     }
   }
 };
