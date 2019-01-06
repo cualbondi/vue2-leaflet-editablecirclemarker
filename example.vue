@@ -7,7 +7,6 @@
 
 <script>
   import { Vue, Component } from 'vue-property-decorator'
-  import L from 'leaflet'
   import * as Vue2Leaflet from 'vue2-leaflet'
   import Vue2LeafletEditablecirclemarker from './Vue2LeafletEditablecirclemarker'
   import iconUrl from 'leaflet/dist/images/marker-icon.png'
@@ -15,7 +14,7 @@
 
   const x = -35.15;
   const y = -58.2;
-  let llvar = L.latLng(x, y)
+  let llvar = Vue2Leaflet.L.latLng(x, y)
 
   @Component({
     components: {
@@ -25,11 +24,11 @@
     },
   })
   export default class Map extends Vue {
-    icon = L.icon(Object.assign({},
-      L.Icon.Default.prototype.options,
-      {iconUrl, shadowUrl},
-    ))
-    center = L.latLng(x, y)
+    icon = Vue2Leaflet.L.divIcon({
+      className: 'markerAB markerA',
+      popupAnchor: [0, -40]
+    })
+    center = Vue2Leaflet.L.latLng(x, y)
     rad = 200
     get ll() {
       return llvar
